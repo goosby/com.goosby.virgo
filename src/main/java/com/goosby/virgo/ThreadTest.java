@@ -1,12 +1,12 @@
 package com.goosby.virgo;
 
-public class Test {
+public class ThreadTest {
 	public static void main(String[] args) {
-			MyThread thread1 = new Test().new MyThread();
+			MyThread thread1 = new ThreadTest().new MyThread();
 			thread1.setName("MyThread");
 			thread1.start();;
 			
-			RunThread thread2 = new Test().new RunThread();
+			RunThread thread2 = new ThreadTest().new RunThread();
 			thread2.run();
 	}
 	
