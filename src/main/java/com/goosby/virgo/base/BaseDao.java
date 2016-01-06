@@ -40,8 +40,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 向数据库中插入模型<br>
 	 * 继承BaseDao后，可以不用写insert方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为insert的语句
 	 */
 	public int insert(T t) {
@@ -52,8 +52,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 插入模型<br>
 	 * 继承BaseDao后，可以不用写update方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为${insertStmt}的语句
 	 */
 	public int insertT(String insertStmt, Map<String, Object> condition) {
@@ -64,8 +64,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 批量插入<br>
 	 * 使用insert into test(name) values ('a'),('b')...('z');语句，每次插入batchSize(默认1024)条
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper(也可以重写getMapperNamespace)，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper(也可以重写getMapperNamespace)，<br>
 	 * 其中 * 表示去掉后缀的Dao类名。必须有一个id为batchInsert的插入语句
 	 * 
 	 * @param 要插入的对象列表
@@ -89,8 +89,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 更新模型<br>
 	 * 继承BaseDao后，可以不用写update方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为update的语句
 	 */
 	public int update(T t) {
@@ -101,8 +101,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 更新模型<br>
 	 * 继承BaseDao后，可以不用写update方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为${updateStmt}的语句
 	 */
 	protected int updateT(String updateStmt, Object value) {
@@ -113,8 +113,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 更新模型<br>
 	 * 继承BaseDao后，可以不用写update方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为${updateStmt}的语句
 	 */
 	protected int updateT(String updateStmt, Map<String, Object> condition) {
@@ -125,8 +125,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 批量更新<br>
 	 * 继承BaseDao后，可以不用写batchUpdate方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为batchUpdate的语句
 	 */
 	public int batchUpdateT(Map<String, Object> condition) {
@@ -137,8 +137,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据id查询模型<br>
 	 * 继承BaseDao后，可以不用写getById方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为getById的语句
 	 */
 	@SuppressWarnings("unchecked")
@@ -150,8 +150,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据单个条件查询模型<br>
 	 * 继承BaseDao后，可以不用写getById方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为<code>statementId</code>的语句
 	 */
 	@SuppressWarnings("unchecked")
@@ -163,8 +163,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据多个条件查询模型<br>
 	 * 继承BaseDao后，可以不用写getById方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为<code>statementId</code>的语句
 	 */
 	@SuppressWarnings("unchecked")
@@ -176,8 +176,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据id删除模型<br>
 	 * 继承BaseDao后，可以不用写delete方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为delete的语句
 	 */
 	public int delete(Integer id) {
@@ -198,8 +198,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 查询模型列表<br>
 	 * 继承BaseDao后，可以不用写getList方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为getAll的语句
 	 */
 	@SuppressWarnings("unchecked")
@@ -214,8 +214,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 查询模型列表<br>
 	 * 继承BaseDao后，可以不用写getList方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为getList的语句
 	 */
 	@SuppressWarnings("unchecked")
@@ -230,8 +230,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据条件查询模型列表<br>
 	 * 继承BaseDao后，可以不用写getList方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为getList的语句
 	 * 
 	 * @param condition 把所有参数都封装到这个map对象里
@@ -248,8 +248,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据语句和条件查询模型列表<br>
 	 * 继承BaseDao后，可以不用写getList方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为<code>listStmtId</code>的语句
 	 * 
 	 * @param listStmtId 查询语句的名称（id）
@@ -267,8 +267,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据语句和条件查询模型列表<br>
 	 * 继承BaseDao后，可以不用写getList方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为<code>listStmtId</code>的语句
 	 * 
 	 * @param listStmtId 查询语句的名称（id）
@@ -286,8 +286,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 查询模型总数<br>
 	 * 继承BaseDao后，可以不用写count方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为count的语句
 	 */
 	public int count() {
@@ -300,8 +300,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据条件查询模型总数<br>
 	 * 继承BaseDao后，可以不用写count方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为count的语句
 	 * 
 	 * @param condition 把所有参数都封装到这个map对象里
@@ -316,8 +316,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据语句和条件查询模型总数<br>
 	 * 继承BaseDao后，可以不用写count方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为<code>countStmtId</code>的语句
 	 * 
 	 * @param countStmtId 统计语句的名称（id）
@@ -333,8 +333,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据语句和条件查询模型总数<br>
 	 * 继承BaseDao后，可以不用写getListWithPage方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有两个id分别为count和getList的语句
 	 * 
 	 * @param countStmtId 查询语句的名称（id）
@@ -363,8 +363,8 @@ public abstract class BaseDao<T> {
 	/**
 	 * 根据语句和条件查询模型总数<br>
 	 * 继承BaseDao后，可以不用写insert方法，而直接使用这个方法。<br>
-	 * 要使用这个方法，要求Mapper文件必须放在"com.luolai.ec.services.mapper目录下，<br>
-	 * 而且namespace必须为com.luolai.ec.services.mapper.*Mapper，<br>
+	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
+	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
 	 * 其中 * 表示去掉后缀的Dao类名，必须有两个id分别为<code>countStmtId</code>和<code>listStmtId</code>的语句<br>
 	 * 
 	 * 第一个参数是统计总数的语句，第二个是查询的语句，如果写反了，会抛出异常：<br>
@@ -401,7 +401,7 @@ public abstract class BaseDao<T> {
 	 */
 	protected String getMapperNamespace() {
 		if (namespace == null) {
-			namespace = "com.luolai.ec.services.mapper."
+			namespace = "com.goosby.mapper."
 					+ this.getClass().getSimpleName().replaceAll("Dao$", "Mapper.");
 		}
 		logger.trace("BaseDao取得命名空间: {}..", namespace);
