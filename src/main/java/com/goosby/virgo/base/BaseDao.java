@@ -269,7 +269,7 @@ public abstract class BaseDao<T> {
 	 * 继承BaseDao后，可以不用写getList方法，而直接使用这个方法。<br>
 	 * 要使用这个方法，要求Mapper文件必须放在"com.goosby.mapper目录下，<br>
 	 * 而且namespace必须为com.goosby.mapper.*Mapper，<br>
-	 * 其中 * 表示去掉后缀的Dao类名，必须有一个id为<code>listStmtId</code>的语句
+	 * 其中 *表示去掉后缀的Dao类名，必须有一个id为<code>listStmtId</code>的语句
 	 * 
 	 * @param listStmtId 查询语句的名称（id）
 	 * @param condition 把所有参数都封装到这个map对象里
